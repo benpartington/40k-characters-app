@@ -1,0 +1,49 @@
+{
+  "characters": [
+    {
+      "id": 0,
+      "name": "Abaddon The Despoiler",
+      "faction": "Chaos Space Marines",
+      "photo": "/assets/abaddon.jpg",
+      "age": 10000,
+      "homeworld": "Cthonia",
+      "status": true
+    },
+    {
+      "id": 1,
+      "name": "Eldrad Ulthran",
+      "faction": "Aeldari",
+      "photo": "/assets/eldrad.jpg",
+      "age": 10000,
+      "homeworld": "Ulthwe",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Sanguinius",
+      "faction": "Imperium of Man",
+      "photo": "/assets/sanga.jpg",
+      "age": 0,
+      "homeworld": "Baal",
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "Ghazghkull Thraka",
+      "faction": "Orkz",
+      "photo": "/assets/ghaz.jpg",
+      "age": 100,
+      "homeworld": "Urk",
+      "status": true
+    },
+    {
+      "id": 4,
+      "name": "Robute Guilliman",
+      "faction": "Imperium of Man",
+      "photo": "/assets/guilliman.jpg",
+      "age": 10000,
+      "homeworld": "Ultramar",
+      "status": true
+    }
+  ]
+}
