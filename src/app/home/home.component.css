@@ -7,6 +7,20 @@
   justify-content: space-around;
 }
 
+.home-nav {
+  margin-bottom: 14px;
+}
+.nav-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--primary-color), #4f47bd);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-link:hover { opacity: 0.95; transform: translateY(-1px); }
+
 input[type="text"] {
   border: solid 1px var(--primary-color);
   padding: 10px;
