@@ -10,7 +10,7 @@ import { RouterModule } from "@angular/router";
       <header class="brand-name">
         <a routerLink="/" class="brand-logo" aria-label="40K-Character-App logo">
           <img
-            src="/assets/logo.png"
+            src="/assets/logo4.png"
             alt="40K-Character-App logo"
             aria-hidden="true"
           />
