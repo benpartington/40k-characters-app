@@ -36,7 +36,7 @@ export class HomeComponent {
   filteredFactionList: CharacterBio[] = [];
 
   constructor() {
-    this.characterService.getAllCharacteeBios().then((characterBioList: CharacterBio[]) => {
+    this.characterService.getAllCharacterBios().then((characterBioList: CharacterBio[]) => {
       this.characterBioList = characterBioList;
       this.filteredFactionList = characterBioList;
     });

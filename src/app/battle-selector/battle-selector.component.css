@@ -51,3 +51,7 @@
   .vs-display { flex-direction: column; }
   .fighter { width: 100%; }
 }
+
+.clear-btn {
+  margin-bottom: 20px;
+}

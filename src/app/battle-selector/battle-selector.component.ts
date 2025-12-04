@@ -11,7 +11,11 @@ import { CharacterBio } from '../character-bio';
     <section class="battle-page">
       <h2 class="page-heading">Battle Selector</h2>
 
-      <p class="instructions">Click character cards to select up to two fighters. Selected fighters appear below side-by-side.</p>
+      <p class="instructions">Click character cards to select two fighters.</p>
+
+      <div class="clear-btn">
+        <button class="secondary" type="button" (click)="selected = []" [disabled]="selected.length === 0">Clear Selections</button>
+      </div>
 
       <div class="characters-grid">
         <div
@@ -46,7 +50,7 @@ export class BattleSelectorComponent {
   selected: CharacterBio[] = [];
 
   constructor() {
-    this.characterService.getAllCharacteeBios().then(cs => (this.characters = cs ?? []));
+    this.characterService.getAllCharacterBios().then(cs => (this.characters = cs ?? []));
   }
 
   isSelected(id?: number) {

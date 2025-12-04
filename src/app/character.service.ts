@@ -9,7 +9,7 @@ export class CharacterService {
 
   constructor() {}
 
-  async getAllCharacteeBios(): Promise<CharacterBio[]> {
+  async getAllCharacterBios(): Promise<CharacterBio[]> {
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
