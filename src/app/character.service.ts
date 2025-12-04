@@ -27,7 +27,7 @@ export class CharacterService {
   ): void {
     // For now just log comments — could be extended to POST to backend in the future.
     console.log(
-      `Comment submitted for ${firstName} ${lastName} with email ${email}. Comment: ${commentText ?? ""}`
+      `Comment submitted by ${firstName} ${lastName} with email ${email}. Comment: ${commentText ?? ""}`
     );
   }
 }
