@@ -1,20 +1,31 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CharacterService } from '../character.service';
-import { CharacterBio } from '../character-bio';
+import { Component, inject } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { CharacterService } from "../character.service";
+import { CharacterBio } from "../character-bio";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-battle-selector',
+  selector: "app-battle-selector",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
+    <section class="home-nav">
+      <a routerLink="/" class="nav-link">Home</a>
+    </section>
     <section class="battle-page">
       <h2 class="page-heading">Battle Selector</h2>
 
       <p class="instructions">Click character cards to select two fighters.</p>
 
       <div class="clear-btn">
-        <button class="secondary" type="button" (click)="selected = []" [disabled]="selected.length === 0">Clear Selections</button>
+        <button
+          class="secondary"
+          type="button"
+          (click)="selected = []"
+          [disabled]="selected.length === 0"
+        >
+          Clear Selections
+        </button>
       </div>
 
       <div class="characters-grid">
@@ -42,7 +53,7 @@ import { CharacterBio } from '../character-bio';
       </div>
     </section>
   `,
-  styleUrls: ['./battle-selector.component.css'],
+  styleUrls: ["./battle-selector.component.css"],
 })
 export class BattleSelectorComponent {
   characterService = inject(CharacterService);
@@ -50,17 +61,19 @@ export class BattleSelectorComponent {
   selected: CharacterBio[] = [];
 
   constructor() {
-    this.characterService.getAllCharacterBios().then(cs => (this.characters = cs ?? []));
+    this.characterService
+      .getAllCharacterBios()
+      .then((cs) => (this.characters = cs ?? []));
   }
 
   isSelected(id?: number) {
-    return this.selected.some(s => s.id === id);
+    return this.selected.some((s) => s.id === id);
   }
 
   toggleSelect(c: CharacterBio) {
     const already = this.isSelected(c.id);
     if (already) {
-      this.selected = this.selected.filter(s => s.id !== c.id);
+      this.selected = this.selected.filter((s) => s.id !== c.id);
       return;
     }
 
