@@ -23,7 +23,3 @@ section.character a {
   text-decoration: none;
   color: var(--primary-color);
 }
-section.character a::after {
-  content: "\203A";
-  margin-left: 5px;
-}

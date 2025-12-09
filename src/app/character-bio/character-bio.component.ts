@@ -9,18 +9,20 @@ import { RouterModule } from "@angular/router";
   imports: [CommonModule, RouterModule],
   template: `
     <section class="character">
-    <a [routerLink]="['/details', characterBio.id]">
-      <img
-        class="character-photo"
-        [src]="characterBio.photo"
-        alt="Image of {{ characterBio.name }}"
-      />
-    </a>  
+      <a [routerLink]="['/details', characterBio.id]">
+        <img
+          class="character-photo"
+          [src]="characterBio.photo"
+          alt="Image of {{ characterBio.name }}"
+        />
+      </a>
       <h2 class="character-heading">{{ characterBio.name }}</h2>
       <p class="character-faction">
         {{ characterBio.faction }}
       </p>
-      <a [routerLink]="['/details', characterBio.id]">Learn More</a>
+      <a [routerLink]="['/details', characterBio.id]"
+        >Learn More <span>&rsaquo;</span>
+      </a>
     </section>
   `,
   styleUrls: ["./character-bio.component.css"],
