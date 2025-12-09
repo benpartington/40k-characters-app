@@ -1,14 +1,18 @@
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { CharacterBioComponent } from "../character-bio/character-bio.component";
+import { RouterModule } from '@angular/router';
 import { CharacterBio } from "../character-bio";
 import { CharacterService } from "../character.service";
 
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [CommonModule, CharacterBioComponent],
+  imports: [CommonModule, CharacterBioComponent, RouterModule],
   template: `
+    <section class="home-nav">
+      <a routerLink="/battle" class="nav-link">Battle Selector</a>
+    </section>
     <section>
       <form>
         <input type="text" placeholder="Filter by faction" #filter/>
@@ -32,7 +36,7 @@ export class HomeComponent {
   filteredFactionList: CharacterBio[] = [];
 
   constructor() {
-    this.characterService.getAllCharacteeBios().then((characterBioList: CharacterBio[]) => {
+    this.characterService.getAllCharacterBios().then((characterBioList: CharacterBio[]) => {
       this.characterBioList = characterBioList;
       this.filteredFactionList = characterBioList;
     });
